@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SixtyEightPublishers\WebpackEncoreBundle\Helper;
+namespace SixtyEightPublishers\RemoteAccessManager\Tests\Helper;
 
 use Nette;
 use Tester;

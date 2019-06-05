@@ -17,7 +17,7 @@ class RemoteAccessExtensionIntegrationTest extends Tester\TestCase
 	 */
 	public function testRemoteAccessManagerRegistered(): void
 	{
-		$container = SixtyEightPublishers\WebpackEncoreBundle\Helper\ContainerFactory::createContainer(
+		$container = SixtyEightPublishers\RemoteAccessManager\Tests\Helper\ContainerFactory::createContainer(
 			static::class . __METHOD__,
 			[
 				'remote_access' => [
@@ -37,7 +37,7 @@ class RemoteAccessExtensionIntegrationTest extends Tester\TestCase
 	 */
 	public function testCustomHandlerRegistered(): void
 	{
-		$container = SixtyEightPublishers\WebpackEncoreBundle\Helper\ContainerFactory::createContainer(
+		$container = SixtyEightPublishers\RemoteAccessManager\Tests\Helper\ContainerFactory::createContainer(
 			static::class . __METHOD__,
 			[
 				'remote_access' => [
@@ -58,7 +58,7 @@ class RemoteAccessExtensionIntegrationTest extends Tester\TestCase
 	 */
 	public function testDisabledExtension(): void
 	{
-		$container = SixtyEightPublishers\WebpackEncoreBundle\Helper\ContainerFactory::createContainer(
+		$container = SixtyEightPublishers\RemoteAccessManager\Tests\Helper\ContainerFactory::createContainer(
 			static::class . __METHOD__,
 			[
 				'remote_access' => [

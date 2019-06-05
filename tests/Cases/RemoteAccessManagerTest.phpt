@@ -17,6 +17,16 @@ final class RemoteAccessManagerTest extends Tester\TestCase
 			DENY_ALL = SixtyEightPublishers\RemoteAccessManager\IRemoteAccessManager::DENY_ALL;
 
 	/**
+	 * {@inheritdoc}
+	 */
+	protected function tearDown(): void
+	{
+		parent::tearDown();
+
+		Mockery::close();
+	}
+
+	/**
 	 * @return void
 	 */
 	public function testAllowInConsoleMode(): void
