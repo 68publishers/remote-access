@@ -10,7 +10,7 @@ final class DefaultAccessHandler implements IAccessHandler
 {
 	use Nette\SmartObject;
 
-	/** @var string  */
+	/** @var string */
 	private $message = 'Access denied!';
 
 	/**

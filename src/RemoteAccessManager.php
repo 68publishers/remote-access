@@ -23,13 +23,13 @@ final class RemoteAccessManager implements IRemoteAccessManager
 	/** @var array */
 	private $blacklist;
 
-	/** @var string  */
+	/** @var string */
 	private $key;
 
-	/** @var int  */
+	/** @var int */
 	private $mode;
 
-	/** @var bool  */
+	/** @var bool */
 	private $consoleMode;
 
 	/**
@@ -87,7 +87,7 @@ final class RemoteAccessManager implements IRemoteAccessManager
 		return $allow;
 	}
 
-	/******************* interface \SixtyEightPublishers\RemoteAccessManager\IRemoteAccessManager *******************/
+	/******************** interface \SixtyEightPublishers\RemoteAccessManager\IRemoteAccessManager ********************/
 
 	/**
 	 * {@inheritdoc}

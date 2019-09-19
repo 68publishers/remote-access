@@ -6,10 +6,14 @@ namespace SixtyEightPublishers\RemoteAccessManager;
 
 interface IRemoteAccessManager
 {
-	const   COOKIE_SECRET = 'ram-secret-key';
+	/** @var string */
+	public const COOKIE_SECRET = 'ram-secret-key';
 
-	const   ALLOW_ALL = TRUE,
-			DENY_ALL = FALSE;
+	/** @var bool */
+	public const ALLOW_ALL = TRUE;
+
+	/** @var bool */
+	public const DENY_ALL = FALSE;
 
 	/**
 	 * @return void

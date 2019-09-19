@@ -23,7 +23,7 @@ final class ContainerFactory
 		}
 
 		$loader = new Nette\DI\ContainerLoader(TEMP_PATH . '/cache/Nette.Configurator', TRUE);
-		$class = $loader->load(function (Nette\DI\Compiler $compiler) use ($config): void {
+		$class = $loader->load(static function (Nette\DI\Compiler $compiler) use ($config): void {
 			$compiler->addExtension('remote_access', new SixtyEightPublishers\Application\RemoteAccessManager\DI\RemoteAccessManagerExtension());
 
 			if (is_array($config)) {

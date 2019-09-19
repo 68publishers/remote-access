@@ -1,9 +1,13 @@
 {
 	"name": "68publishers/remote-access",
-	"description": "Block or allow remote access",
+	"description": "Block or allow remote access with easy",
 	"keywords": ["68publishers", "remote-access"],
 	"license": "MIT",
 	"authors": [
+		{
+			"name": "'68 Publishers s.r.o.'",
+			"email": "hello@68publishers.io"
+		},
 		{
 			"name": "Vojtěch Lacina",
 			"email": "MoraviaD1@gmail.com"
@@ -14,10 +18,10 @@
 		}
 	],
 	"require": {
-		"php": "~7.1",
-		"nette/di": "~2.4",
-		"nette/http": "~2.4",
-		"nette/application": "~2.4"
+		"php": "^7.1",
+		"nette/di": "^2.4",
+		"nette/http": "^2.4",
+		"nette/application": "^2.4"
 	},
 	"require-dev": {
 		"friendsofphp/php-cs-fixer": "^2.0",

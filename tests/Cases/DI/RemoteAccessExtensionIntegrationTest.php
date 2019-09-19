@@ -13,7 +13,7 @@ require __DIR__ . '/../../bootstrap.php';
 class RemoteAccessExtensionIntegrationTest extends Tester\TestCase
 {
 	/**
-	 * @return void
+	 * @throws \Exception
 	 */
 	public function testRemoteAccessManagerRegistered(): void
 	{
@@ -33,7 +33,7 @@ class RemoteAccessExtensionIntegrationTest extends Tester\TestCase
 	}
 
 	/**
-	 * @return void
+	 * @throws \Exception
 	 */
 	public function testCustomHandlerRegistered(): void
 	{
@@ -67,7 +67,7 @@ class RemoteAccessExtensionIntegrationTest extends Tester\TestCase
 			]
 		);
 
-		Tester\Assert::exception(function () use ($container) {
+		Tester\Assert::exception(static function () use ($container) {
 			$container->getByType(SixtyEightPublishers\RemoteAccessManager\IRemoteAccessManager::class);
 		}, Nette\DI\MissingServiceException::class);
 	}
