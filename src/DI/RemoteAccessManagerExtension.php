@@ -9,7 +9,7 @@ use SixtyEightPublishers;
 
 class RemoteAccessManagerExtension extends Nette\DI\CompilerExtension
 {
-	/** @var array  */
+	/** @var array */
 	private $defaults = [
 		'enabled' => TRUE,
 		'allow_all' => SixtyEightPublishers\RemoteAccessManager\IRemoteAccessManager::ALLOW_ALL,
@@ -20,7 +20,7 @@ class RemoteAccessManagerExtension extends Nette\DI\CompilerExtension
 	];
 
 	/**
-	 * {@inheritdoc}
+	 * @throws Nette\Utils\AssertionException
 	 */
 	public function loadConfiguration(): void
 	{

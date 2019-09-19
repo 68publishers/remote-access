@@ -13,8 +13,11 @@ require __DIR__ . '/../bootstrap.php';
 
 final class RemoteAccessManagerTest extends Tester\TestCase
 {
-	const   ALLOW_ALL = SixtyEightPublishers\RemoteAccessManager\IRemoteAccessManager::ALLOW_ALL,
-			DENY_ALL = SixtyEightPublishers\RemoteAccessManager\IRemoteAccessManager::DENY_ALL;
+	/** @var bool */
+	public const ALLOW_ALL = SixtyEightPublishers\RemoteAccessManager\IRemoteAccessManager::ALLOW_ALL;
+
+	/** @var bool */
+	public const DENY_ALL = SixtyEightPublishers\RemoteAccessManager\IRemoteAccessManager::DENY_ALL;
 
 	/**
 	 * {@inheritdoc}
@@ -128,7 +131,7 @@ final class RemoteAccessManagerTest extends Tester\TestCase
 	private function assertAllow(SixtyEightPublishers\RemoteAccessManager\RemoteAccessManager $manager): void
 	{
 		Tester\Assert::exception(
-			function () use ($manager) {
+			static function () use ($manager) {
 				$manager->process();
 			},
 			\RuntimeException::class,
@@ -142,7 +145,7 @@ final class RemoteAccessManagerTest extends Tester\TestCase
 	private function assertDeny(SixtyEightPublishers\RemoteAccessManager\RemoteAccessManager $manager): void
 	{
 		Tester\Assert::exception(
-			function () use ($manager) {
+			static function () use ($manager) {
 				$manager->process();
 			},
 			\RuntimeException::class,
