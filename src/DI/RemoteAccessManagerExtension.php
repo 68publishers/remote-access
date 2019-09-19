@@ -20,6 +20,8 @@ class RemoteAccessManagerExtension extends Nette\DI\CompilerExtension
 	];
 
 	/**
+	 * {@inheritdoc}
+	 *
 	 * @throws Nette\Utils\AssertionException
 	 */
 	public function loadConfiguration(): void
