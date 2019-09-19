@@ -59,7 +59,7 @@ final class DefaultAccessHandlerTest extends Tester\TestCase
 		$handler->setDenyMessage('My custom message!');
 
 		Tester\Assert::exception(
-			function () use ($handler) {
+			static function () use ($handler) {
 				$handler->deny();
 			},
 			Nette\Application\BadRequestException::class,

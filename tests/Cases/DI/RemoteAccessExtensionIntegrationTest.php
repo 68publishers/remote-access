@@ -67,7 +67,7 @@ class RemoteAccessExtensionIntegrationTest extends Tester\TestCase
 			]
 		);
 
-		Tester\Assert::exception(function () use ($container) {
+		Tester\Assert::exception(static function () use ($container) {
 			$container->getByType(SixtyEightPublishers\RemoteAccessManager\IRemoteAccessManager::class);
 		}, Nette\DI\MissingServiceException::class);
 	}
