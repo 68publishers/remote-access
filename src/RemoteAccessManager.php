@@ -87,7 +87,7 @@ final class RemoteAccessManager implements IRemoteAccessManager
 		return $allow;
 	}
 
-	/******************* interface \SixtyEightPublishers\RemoteAccessManager\IRemoteAccessManager *******************/
+	/******************** interface \SixtyEightPublishers\RemoteAccessManager\IRemoteAccessManager ********************/
 
 	/**
 	 * {@inheritdoc}
